@@ -1,0 +1,14 @@
+defaults:
+    prefix: /api/v1/
+
+catch:
+    CreateServerRequest:
+        method: PUT
+        pattern: /request/setupLinode/{clientId}/{jobId}
+        params:
+            dc: [ 2,6,7 ]
+    CheckServerCreationStatus:
+        method: GET
+        pattern: /response/setupLinode/{clientId}/{jobId}
+        params:
+            dc: [ 2,6,7 ]
